@@ -277,7 +277,7 @@ class BedrockModel(BaseChatModel):
                     }
                 )
             elif isinstance(message, AssistantMessage):
-                if message.content.strip():
+                if message.content and message.content.strip():
                     # Text message
                     messages.append(
                         {
